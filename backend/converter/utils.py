@@ -9,12 +9,12 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def get_spotify_tracks(playlist_url):
-    SPOTIFY_CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID")
-    SPOTIFY_CLIENT_SECRET = os.getenv("SPOTIFY_CLIENT_SECRET")
+    SPOTIFY_CLIENT_ID = os.getenv("SPOTIPY_CLIENT_ID")
+    SPOTIFY_CLIENT_SECRET = os.getenv("SPOTIPY_CLIENT_SECRET")
 
     sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(
-        client_id=SPOTIFY_CLIENT_ID,
-        client_secret=SPOTIFY_CLIENT_SECRET
+        client_id=os.getenv("SPOTIPY_CLIENT_ID"),
+        client_secret=os.getenv("SPOTIPY_CLIENT_SECRET")
     ))
 
     playlist_id = playlist_url.split("/")[-1].split("?")[0]
