@@ -4,3 +4,5 @@ __pycache__/
 .env.*
 node_modules/
 dist/
+youtube_oauth.json
+client_secret.json
