@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>Spotify → YouTube Music Converter 🎵</h2>
+
+  <input [(ngModel)]="spotifyUrl" placeholder="Paste Spotify Playlist URL" class="url-input" />
+  <button (click)="convertPlaylist()" [disabled]="loading">
+    {{ loading ? 'Converting...' : 'Convert' }}
+  </button>
+
+  <div *ngIf="loading" class="loading-msg">
+    Converting playlist... Please wait ⏳
+  </div>
+
+  <div *ngIf="youtubeUrl && !loading" class="result-box">
+    <p>Your YouTube Music Playlist:</p>
+    <div class="link-section">
+      <input type="text" [value]="youtubeUrl" readonly class="yt-link" />
+      <button (click)="copyLink()">📋</button>
+    </div>
+    <span *ngIf="copied" class="copied-msg">Copied!</span>
+  </div>
+
+  <div *ngIf="error" class="error-msg">{{ error }}</div>
+</div>

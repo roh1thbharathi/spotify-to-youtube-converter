@@ -1,0 +1,75 @@
+=.container {
+  width: 100%;
+  max-width: 600px;
+  padding: 24px;
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 255, 174, 0.2);
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #00ffae;
+}
+
+.url-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background-color: #2c2c2c;
+  color: white;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 16px;
+  background-color: #00ffae;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #000;
+  margin-top: 10px;
+}
+
+.result-box {
+  margin-top: 30px;
+  padding: 16px;
+  background-color: #2d2d2d;
+  border-radius: 10px;
+}
+
+.link-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.yt-link {
+  width: 80%;
+  padding: 8px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background-color: #1a1a1a;
+  color: #00ffae;
+  font-weight: bold;
+}
+
+.copied-msg {
+  color: #00ffae;
+  font-size: 14px;
+  margin-top: 10px;
+  display: block;
+}
+
+.loading-msg {
+  margin-top: 20px;
+  color: #00ffae;
+  font-style: italic;
+}
+
