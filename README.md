@@ -1,3 +1,4 @@
+
 # 🎵 Spotify to YouTube Music Converter
 
 Convert a **Spotify playlist** into a **YouTube Music playlist** — using a modern Angular + Django web app.
@@ -76,23 +77,41 @@ cd spotify-to-ytmusic
 
 ```bash
 cd backend
-pip install -r requirements.txt
-```
-
-If `requirements.txt` is missing:
 
 ```bash
-pip install django djangorestframework django-cors-headers spotipy google-auth google-auth-oauthlib google-api-python-client
+pip install django djangorestframework django-cors-headers spotipy google-auth google-auth-oauthlib google-api-python-client python-dotenv
 ```
 
-#### 🔑 Run OAuth Flow (once)
+#### 🔐 Set up environment variables
+
+Create a `.env` file in the **project root** (same level as `backend/`) and add:
+
+```env
+SPOTIPY_CLIENT_ID=your_spotify_client_id
+SPOTIPY_CLIENT_SECRET=your_spotify_client_secret
+
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+```
+
+Or copy the included `.env.example` and fill in your credentials:
 
 ```bash
-python converter/youtube_auth.py
+cp backend/backend/.env.example .env
+```
+
+---
+
+#### 🔑 Run OAuth Flow (only once)
+
+```bash
+python backend/converter/youtube_auth.py
 ```
 
 - This will open a browser asking for permission.
-- After accepting, `youtube_oauth.json` will be created in the same folder.
+- After accepting, it saves `youtube_oauth.json` locally (used by the app).
+
+---
 
 #### ▶️ Start Django Backend
 
@@ -100,7 +119,7 @@ python converter/youtube_auth.py
 python manage.py runserver
 ```
 
-Django will run on:  
+Django will run at:  
 **http://127.0.0.1:8000/**
 
 ---
@@ -113,7 +132,7 @@ npm install
 ng serve
 ```
 
-Angular will run on:  
+Angular will run at:  
 **http://localhost:4200/**
 
 ---
@@ -128,7 +147,7 @@ Angular will run on:
 
 ---
 
-## 🧩 Common Questions
+## ❓ Common Questions
 
 ### 🔹 Why do I need OAuth for YouTube?
 
@@ -169,6 +188,8 @@ spotify-to-ytmusic/
 │               └── .css
 ```
 
+---
+
 ## 📝 License
 
 This project is for **educational purposes only** and is not affiliated with Spotify or Google.
@@ -177,5 +198,5 @@ This project is for **educational purposes only** and is not affiliated with Spo
 
 ## 🙏 Credits
 
-Made with ❤️ by Rohith 
-Powered by Open Source APIs + Frameworks.
+Made with ❤️ by Rohith  
+Powered by Open Source APIs + Frameworks
