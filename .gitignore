@@ -1,8 +1,8 @@
 __pycache__/
 *.pyc
 .env
-.env.*
 node_modules/
 dist/
 youtube_oauth.json
 client_secret.json
+backend/backend/client_secret.json
