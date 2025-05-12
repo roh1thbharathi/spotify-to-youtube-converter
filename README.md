@@ -10,7 +10,7 @@ Paste a Spotify playlist URL, and get back a YouTube Music playlist link with th
 ## 🚀 Features
 
 - 🔄 Converts Spotify playlist → YouTube Music
-- 🔐 Uses YouTube OAuth for playlist creation (avoids API quota issues)
+- 🔐 Uses YouTube OAuth for playlist creation
 - 🧠 Backend: Python + Django + REST
 - 💻 Frontend: Angular with live link + copy button
 - 🌙 Dark UI
